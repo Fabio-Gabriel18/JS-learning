@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	
+</head>
+<body>
+  <div id="DOM">
+    <button id="btn1">Não me clica</button>
+    <button onmouseover="mostralerta(1)">Não me encosta</button>
+    <button onmouseup="mostralerta(2)">Se me clicar não pode soltar</button>
+    <button onmouseout="mostralerta(3)">Se me encostar não pode sair</button>
+    <input  onkeypress="mostralerta(4)" placeholder="Não digita nesse campo." id="naopode" name="naopode">
+    <input type="text"  placeholder="Nem nesse, não digita." id="naovou" name="naovou">
+    <button name="submit">Não vou enviar.</button>
+    
+
+  </div>
+
+
+  <script type="text/javascript">
+		
+		var clicado = document.querySelector('button#btn1');
+        clicado.onclick = function(){
+        	alert("Não clica no botão.");
+        }	
+
+        	function mostralerta(op){
+			switch(op){
+			case 1: 
+			return alert("Não encosta no botão.");
+
+			case 2: 
+			return alert("Não era pra soltar o botão!");
+
+			case 3: 
+			return alert("Não era pra desencostar do botão!");
+
+            case 4: 
+			return alert("Não é pra digitar no campo!");			
+		    }
+		}
+
+		
+		var digitado = document.getElementById('naopode');
+		console.log(digitado);
+
+		var digitado2 = document.getElementsByTagName('input');
+		console.log(digitado2);
+
+        var digitado3 = document.querySelectorAll('input[value]');
+        console.log(digitado3)
+
+        var digitado4 = document.querySelector('input[name=naovou]')
+        var envio4 = document.querySelector('button[name=submit]');
+        envio4.onclick = function(){
+        	var texto = digitado4.value;
+
+        	alert(texto);
+        	alert("Pare de me forçar a enviar!!!");
+        
+        
+        };
+
+	</script>
+</body>
+</html>
