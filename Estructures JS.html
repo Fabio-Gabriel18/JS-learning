@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Estruturas JS</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+ 		<script type="text/javascript">
+
+ 			var turma = ['Fabio','Juliana','Maiara','Henrique','Beatriz','Andreia','Fabricio'];
+
+		    var pessoa = {
+        		nome: turma[0],
+        		idade: 19,
+        		humano:  true,
+        		sexo: 'M'
+    		};
+
+ 	       function Genero(sexo){
+        	if (sexo === 'F'){
+            	return "Feminino";
+        	}else if(sexo === 'M'){ //JS aceita else if
+                return "Masculino";
+            }else{
+                return "Gênero não identificado!!!"
+        	}
+    	   }
+    
+
+    		console.log(Genero(pessoa.sexo)); //"pessoa" é o nome do objeto e se usa '.' pra separar o nome do atributo que será chamado.
+
+
+     		function robo(humano){
+        		switch (humano){
+            		case true:
+                		return "Você é humano";
+            		case false:
+                		return "Você não é humano!!!";
+            		default:
+                		return "Não sei o que você é!!!";
+        		}
+     		}
+
+     		console.log(robo(pessoa.humano));
+
+
+     		if (pessoa.nome === 'Fabio' && pessoa.idade > 18  && pessoa.sexo !== 'F'){   //AND (&&), OR (||) e NOT (!)
+        		console.log("Olá Fabio!!!");
+     		}
+
+     		var confirma = turma[2] === 'Maiara'; //atribuir a uma variável um valor booleano de acordo com uma condição 
+     		console.log(confirma);
+
+
+     		var human = (pessoa.humano == true) ? "É humano." : "É Animal ou Robô"; // verificação if de dois parâmetros CONDIÇÃO TERNÁRIA.
+     		console.log(human);
+
+     		for(i = 0; i < 10; i++){
+     			console.log(i);
+     		}
+
+     		var j = 0, bbb = 1;
+     		
+     		while(j<5){
+                bbb += j;
+     			console.log(bbb);
+
+     			j+=1;
+     		}
+            
+            function incremento(j){
+            	
+            	return console.log("Pisca-pisca");
+            }
+
+            function outro(o){
+            	return console.log("Apareceu!!!");
+            }
+
+            setInterval(incremento, 5000);
+
+            setTimeout(outro, 4000);
+
+
+ 		</script>
+	</body>
+</html>

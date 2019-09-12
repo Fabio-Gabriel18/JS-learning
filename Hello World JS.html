@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Rocketseat</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+
+
+
+<script>
+    
+
+    var nome = "Fabio";
+    var idade = 19;
+    var humano = true;
+
+    var turma = ['Fabio','Juliana','Maiara','Henrique','Beatriz','Andreia',true];
+
+    var pessoa = {
+        nome: turma[0],
+        idade: 15,
+        humano: true,
+        sexo: 'M'
+    };
+
+    console.log(turma[6]);
+    console.log(pessoa.nome)
+
+    var x = 5, y = 10;
+    var total = x+y;
+
+    //*x+=3 /*Soma 3 a x */
+
+    console.log(total);
+
+    function soma(n1, n2){  // declaração da função, nome da função e as variáveis locais que receberão os valores a serem usados.
+        var resultado = n1+n2; 
+
+        return resultado;
+    }
+
+
+    //*var resultado = soma(1, 2);
+    console.log(soma(x, y)); //* Nesse log vem o nome da função e os valores que serão usados.
+ 
+    function Genero(sexo){
+        if (sexo === 'F'){
+            return "Feminino";
+        }else if(sexo === 'M'){ //JS aceita else if
+                return "Masculino";
+            }else{
+                return "Gênero não identificado!!!"
+        }
+    }
+    
+
+    console.log(Genero(pessoa.sexo)); //"pessoa" é o nome do objeto e se usa '.' pra separar o nome do atributo que será chamado.
+
+    function robo(humano){
+        switch (humano){
+            case true:
+             return "Você é humano!"
+
+
+
+        }
+    }
+
+</script>
+</body>
+</html>         
